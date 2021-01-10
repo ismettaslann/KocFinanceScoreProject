@@ -6,13 +6,13 @@ Koç Finans kurumu için hazırlanan skor hesaplama projesidir.
 
 Uygulamanın çalışması için bilgisayarınızda aşağıdakilerin kurulu olması gerekli;
 
--Java 1.8
--Maven 3.x
--VueJS
--npm
--docker
--lombok
--Intellij Idea (Tercihen)
+- Java 1.8
+- Maven 3.x
+- VueJS
+- npm
+- docker
+- lombok
+- Intellij Idea (Tercihen)
 
 Uygulamayı klonladıktan sonra VueJS tarafının ayağa kalkması için aşağıdaki adımları izleyebilirsiniz;
 
@@ -64,6 +64,10 @@ Skor hesaplama sırasında herhangi bir hata aldığında;
 
 Her şey başarılı gidip skor hesaplandığında;
 ![gorsel](./images/gorsel-5.png)
+
+
+Skor hesaplandıktan sonra gönderilecek sms tabloya aşağıdaki şekilde kayıt atılır;
+![gorsel](./images/gorsel-7.png)
 
 
 ## Genel Bilgilendirme 

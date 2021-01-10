@@ -18,6 +18,8 @@ public class PersonService {
     private PersonRepository personRepository;
     @Autowired
     private ScoreService scoreService;
+    @Autowired
+    private SendSMSService sendSMSService;
 
     @PostMapping(path = "/insert-new-person-score/")
     public PersonDTO insertNewPersonScore(@RequestBody Person request){
@@ -36,7 +38,14 @@ public class PersonService {
                     .build();
             personRepository.save(person).subscribe();
 
-            return this.mapToDTO(person);
+            PersonDTO personDTO = this.mapToDTO(person);
+
+            try{
+                sendSMSService.insertSendSMS(personDTO);
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+            return personDTO;
         }
 
     }
